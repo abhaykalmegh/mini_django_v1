@@ -62,3 +62,11 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Synopsis to start with django
+
+Step 1: create directory `mkdir <project-root>`
+Step 2: `cd` to directory in step 1
+Step 3: `django-admin.exe startproject velocity`
+Step 4: `cd velocity`
+Step 5: create DB tables  `python manage.py migrate`
+Step 6: run project `python manage.py runserver`
