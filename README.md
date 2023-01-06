@@ -18,7 +18,7 @@ mini_django_v1 (project-directory)
     - README.md
     - requirements.txt
     - venv
-    - velocity  (project)
+    - velocity  (project-root)
         - manage.py
         - velocity  (project-settings)
             - __init__.py
@@ -26,9 +26,25 @@ mini_django_v1 (project-directory)
             - wsgi.py
             - settings.py
             - urls.py
-
+        - blog (application)
+            - __init__.py
+            - admin.py
+            - apps.py
+            - models.py
+            - tests.py
+            - views.py
+            - migrations   (results after running `makemigrate` command.)
+                - __init__.py
 ```
 
+### Django architecture
+
+django follows MVT architecture
+
+- `models.py` :: To write data-models
+- `view.py` :: To write business logic
+- `tests.py` :: To write unit-test
+- `admin.py` :: For admin interface
 
 
 ### django files 
@@ -46,6 +62,7 @@ to start web server.
 ## default database with django 
 
 - sqlite
+- when we do `python manage.py migrate` we basically create all the tables in listed in all the applications
 
 ## how to create tables associated with sub-applications?
 
@@ -70,3 +87,15 @@ python manage.py runserver
 - Step 4: `cd velocity`
 - Step 5: create DB tables  `python manage.py migrate`
 - Step 6: run project `python manage.py runserver`
+- Step 7: create `app` => `python manage.py startapp blog`
+- Step 8: Inform django we have created new app by appending app name to the `INSTALLED_APPS` list in `settings.py`
+- Step 9: Let django know that we have created new model `python manage.py makemigrations blog`
+- Step 10: Register newly created model on admin interface using `admin.py`
+- Step 11: Create user and password using `python manage.py createsuperuser`
+- Step 12: Run application and check admin interface by heading to `/admin`
+
+
+
+# Thumb rule for `project root` directory
+In terms of django, wherever your `manage.py` file exists, that directory is 
+called as `working directory of project` (aka `project root`).
