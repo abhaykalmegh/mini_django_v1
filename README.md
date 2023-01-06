@@ -93,7 +93,7 @@ python manage.py runserver
 - Step 10: migrate DB `python manage.py migrate`
 - Step 11: Register newly created model on admin interface using `admin.py`
 - Step 12: Create user and password using `python manage.py createsuperuser`
-- Step 13: Run application and check admin interface by heading to `/admin`
+- Step 13: Run application `python manage.py runserver` and check admin interface by heading to `/admin`
 
 
 
