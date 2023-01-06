@@ -90,9 +90,10 @@ python manage.py runserver
 - Step 7: create `app` => `python manage.py startapp blog`
 - Step 8: Inform django we have created new app by appending app name to the `INSTALLED_APPS` list in `settings.py`
 - Step 9: Let django know that we have created new model `python manage.py makemigrations blog`
-- Step 10: Register newly created model on admin interface using `admin.py`
-- Step 11: Create user and password using `python manage.py createsuperuser`
-- Step 12: Run application and check admin interface by heading to `/admin`
+- Step 10: migrate DB `python manage.py migrate`
+- Step 11: Register newly created model on admin interface using `admin.py`
+- Step 12: Create user and password using `python manage.py createsuperuser`
+- Step 13: Run application and check admin interface by heading to `/admin`
 
 
 
